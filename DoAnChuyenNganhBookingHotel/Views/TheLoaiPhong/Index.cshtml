@@ -1,0 +1,52 @@
+﻿@model IEnumerable<DoAnChuyenNganhBookingHotel.Models.DB.TheLoaiPhong>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    <div style="padding-top:3px">
+
+        @Html.ActionLink("Tạo Mới", "Create", null, new { @class = "btn btn-outline-secondary" })
+    </div>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tenphong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mota)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.giaphong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.succhua)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.tenphong)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.mota)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.giaphong)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.succhua)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.theloaiphong_id}, new { @class = "btn btn-outline-success" })
+        @Html.ActionLink("Details", "Details", new { id = item.theloaiphong_id}, new { @class = "btn btn-outline-warning" })
+        @Html.ActionLink("Delete", "Delete", new { id = item.theloaiphong_id }, new { @class = "btn btn-outline-danger" })
+    </td>
+</tr>}
+
+</table>

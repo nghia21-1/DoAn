@@ -1,0 +1,89 @@
+﻿@model IEnumerable<DoAnChuyenNganhBookingHotel.Models.DB.DatPhong>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p>
+    <div style="padding-top:3px">
+        @Html.ActionLink("Tạo Mới", "Create", null, new { @class = "btn btn-outline-secondary" })
+    </div>
+</p>
+<table class="table">
+    <tr>
+        <th>
+           Tên Phòng
+        </th>
+        @**<th>
+             @Html.DisplayNameFor(model => model.diachi)
+            </th>*@
+        <th>
+           Email
+        </th>
+        <th>
+            Số Điện Thoại
+        </th>
+        <th>
+           Ngày Đặt Phòng
+        </th>
+        <th>
+           Ngày Trả Phòng
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.succhua)
+            </th>*@
+       @* <th>
+                @Html.DisplayNameFor(model => model.tongsotien)
+            </th>*@
+        <th>
+           Số Phòng
+        </th>
+        <th>
+                Hình Thức Thanh Toán
+            </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tenphong)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.diachi)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sdt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ngaydacphong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ngaytraphong)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.succhua)
+                </td>*@
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.tongsotien)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Phong.sophong)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.HinhThucThanhToan.hinhthucthanhtoan1)
+                </td>*@
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Phong_id}, new { @class = "btn btn-outline-success" })
+                @Html.ActionLink("Details", "Details", new { id = item.Phong_id }, new { @class = "btn btn-outline-warning" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.Phong_id}, new { @class = "btn btn-outline-danger" })
+            </td>
+        </tr>
+}
+
+</table>
+
+

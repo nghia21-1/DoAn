@@ -1,0 +1,25 @@
+﻿@model DoAnChuyenNganhBookingHotel.Models.DB.TrangThaiPhong
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<<div>
+    <h3>Trạng Thái Phòng</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.trangthaiphong1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trangthaiphong1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = Model.trangthaiphong_id}, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Quay Trở về", "Index", null, new { @class = "btn btn-info" })
+</p>

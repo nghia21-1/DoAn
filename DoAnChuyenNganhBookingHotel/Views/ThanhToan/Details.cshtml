@@ -1,0 +1,41 @@
+﻿@model DoAnChuyenNganhBookingHotel.Models.DB.ThanhToan
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>Thanh Toán</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.datphong_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datphong_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sotienthanhtoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sotienthanhtoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhThucThanhToan.hinhthucthanhtoan1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhThucThanhToan.hinhthucthanhtoan1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.thanhtoan_id }, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-info" })
+</p>

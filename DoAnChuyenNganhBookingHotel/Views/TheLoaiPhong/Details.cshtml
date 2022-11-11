@@ -1,0 +1,49 @@
+﻿@model DoAnChuyenNganhBookingHotel.Models.DB.TheLoaiPhong
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>Thể Loại Phòng</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tenphong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenphong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mota)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mota)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.giaphong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.giaphong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.succhua)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.succhua)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sức Chứa", "Edit", new { id = Model.theloaiphong_id }, new { @class = "btn btn-warning" })
+    @Html.ActionLink("Quay Trở Về", "Index", null, new { @class = "btn btn-info" })
+</p>

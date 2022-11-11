@@ -1,0 +1,50 @@
+﻿@model IEnumerable<DoAnChuyenNganhBookingHotel.Models.DB.Phong>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    <div style="padding-top:3px">
+
+        @Html.ActionLink("Tạo Mới", "Create", null, new { @class = "btn btn-outline-secondary" })
+    </div>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Số Phòng
+        </th>
+        <th>
+            Trạng Thái Phòng
+        </th>
+        <th>
+            Tên Phòng
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.sophong)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangThaiPhong.trangthaiphong1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TheLoaiPhong.tenphong)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.phong_id }, new { @class = "btn btn-outline-success" })
+                @Html.ActionLink("Details", "Details", new { id = item.phong_id}, new { @class = "btn btn-outline-warning" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.phong_id }, new { @class = "btn btn-outline-danger" })
+            </td>
+        </tr>
+}
+
+</table>
+
+

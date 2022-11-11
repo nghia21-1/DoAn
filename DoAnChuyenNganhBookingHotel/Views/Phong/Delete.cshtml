@@ -1,0 +1,48 @@
+﻿@model DoAnChuyenNganhBookingHotel.Models.DB.Phong
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Bạn có muốn xóa hay không?</h3>
+<div>
+    <h3>Phòng</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sophong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sophong)
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThaiPhong.trangthaiphong1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThaiPhong.trangthaiphong1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TheLoaiPhong.tenphong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TheLoaiPhong.tenphong)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+@Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-danger" />
+                    @Html.ActionLink("Quay Trở Về", "Index", null, new { @class = "btn btn-info" })
+                </div>}
+</div>

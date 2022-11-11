@@ -1,0 +1,113 @@
+﻿@model DoAnChuyenNganhBookingHotel.Models.DB.DatPhong
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h3>Bạn có muốn xóa hay không? </h3>
+<div>
+    <h4>Đặt Phòng</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tenphong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenphong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diachi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diachi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sdt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sdt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaydacphong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaydacphong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaytraphong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaytraphong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phongchidinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phongchidinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.succhua)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.succhua)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tongsotien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tongsotien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phong.sophong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phong.sophong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhThucThanhToan.hinhthucthanhtoan1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhThucThanhToan.hinhthucthanhtoan1)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+             @Html.ActionLink("Quay trở về", "Index", null, new { @class = "btn btn-info" })
+        </div>
+    }
+</div>
